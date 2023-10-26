@@ -1,28 +1,19 @@
-// Define the funtion 
-function greet(name,kind){
+//CODE RE-USE, AKA STRUCTURED, AKA MODULAR
+// DRY Principle - Don't Repeat Yourself.
 
-    return '$(kind)', '$(name)'; // Use b
-
-}
-// This is the function
-function function-name () {
-// code to executed 
-
-}
-// This is the function 
-function displayGreeting () {
-    let message = "Hello world!" ;
-    console.log(message);
+// DEFINE THE FUNCTION
+function greet(name, kind){
+    return `${kind}, ${name}.`; //Use back-tick js template strings and expressions
+    // return kind + " " + name;
 }
 
-// elsewhere...
-// This is a call to the function 
-displayGreeting();
+//CALL THE FUNCTION AND PASSING THE RESULT TO LOG
+console.log(greet("Kevin", "Howdy"));
+console.log(greet("Class", "Good morning"));
 
-function displayWeekdayMottos() {
-console.log("Make it happen Monday!")
-console.log ("Tackle it Tuseday!")
-console.log(" Finish it Friday!")
+const friend = false
+if(friend){
+    console.log(greet("Dude", "Yo"));
+}else{
+    console.log(greet("Gentle person", "Good day"));
 }
-
-displayWeekdayMottos();
